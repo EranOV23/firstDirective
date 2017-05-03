@@ -1,0 +1,21 @@
+<div class="panel panel-primary">
+	<div class="panel-heading" ng-click="collapse()">
+		<h2>{{user.name}}</h2>
+	</div>
+	<div style="margin-left: 10px" ng-hide=collapsed>
+		<h4>Age: {{user.age}}</h4>
+		<div ng-show='!!user.city'>  
+			<h4>City: {{user.city}}</h4>
+		</div>	
+
+		<h4>Friends</h4>
+		<div ng-repeat="friend in user.friends">
+			<ul>
+				<li>{{friend}}</li>
+				<remove-friend></remove-friend>
+			</ul>
+		</div>
+
+	</div>
+</div>
+
